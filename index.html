@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Project-11</title>
 </head>
 <body>
     <div class="container">
-        <nav>
+        <i class="fa-solid fa-bars menu"></i>
+        <i class="fa-solid fa-xmark cross hide"></i>
+        <nav class="nav-show">
             <div class="logo">
                 <img src="./assets/Logo.png" alt="logo">
             </div>
@@ -35,10 +40,12 @@
             </div>
             <object data="./assets/server.svg" class="rside" type=""></object>
         </div>
+
+        <!-- Section-two -->
+
         <div class="section2">
             <object data="./assets/testing.svg" class="lside2" type=""></object>
             <div class="rside2 ">
-            <!-- <div class="lside3"> -->
                 <h1>We provide The Best <br>Quality With Low Cost </h1>
                 <p>You can have a ready-made website for only a small fee. Complete <br> 
                     feature will facilitate the website creation process, from Auto-Install<br>
@@ -47,6 +54,8 @@
                 <button>Let's Talk</button>
             </div>
         </div>
+
+        <!-- Section three -->
 
         <div class="hero section3">
             <div class="lside lside3">
@@ -59,6 +68,8 @@
             </div>
             <object data="./assets/technical support illustration-01.svg" class="rside rside3" type=""></object>
         </div>
+
+        <!-- Section four -->
 
         <div class="section4">
             <h2>Service We Provide <br>At ThorHosting</h2>
@@ -98,9 +109,10 @@
                     <h3>Website Builder</h3>
                     <p class="intro-text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Cumque aspernatur natus quaerat doloribus deleniti officia quo,</p>
                 </div>
-
             </div>
         </div>
+
+        <!-- Pricing Section -->
 
         <div class="pricing">
             <h1>Flexible & Transparent Pricing</h1>
@@ -194,12 +206,15 @@
             </div>
         </div>
 
+        <!-- Section-seven -->
         <div class="section-7">
             <h1>Quit worrying about <br>Oce-Hosting Service</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Pariatur molestias numquam blanditiis non, eveniet voluptate</p>
             <button>Regiter now</button>
         </div>
         
+
+        <!-- Section Footer -->
         <div class="footer">
             <ul>
                 <li><img class="logo-footer" src="./assets/Logo.png" alt=""></li>
@@ -233,8 +248,26 @@
                 <li><img height="30vh" src="./assets/fb.svg" alt=""></li>
             </ul>
         </div>
-
     </div>
+
+
+    <!-- Responsive navigation toggle script -->
+    <script>
+        let cross = document.querySelector('.cross')
+        let navigation = document.querySelector('.nav-show')
+        let burgerMenu = document.querySelector('.menu')
+        cross.addEventListener('click',()=>{
+        cross.classList.add('hide')
+        navigation.classList.remove('show')
+    })
+
+    burgerMenu.addEventListener('click',()=>{
+        navigation.classList.add('show')
+        burgerMenu.classList.add('.hide')
+        cross.classList.remove('hide')
+    })
+
+</script>
     
 </body>
 </html>
